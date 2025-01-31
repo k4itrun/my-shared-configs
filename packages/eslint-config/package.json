@@ -1,6 +1,6 @@
 {
   "name": "@k4i/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My custom ESLint config",
   "author": "k4itrun",
   "license": "MIT",
@@ -45,9 +45,12 @@
   },
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "publish": "pnpm publish --access public --no-git-checks --provenance",
-    "publish:next": "pnpm publish --access public --no-git-checks --provenance --tag next",
-    "publish:test": "pnpm publish --access public --no-git-checks --provenance --dry-run",
+    "publish": "pnpm publish --access public --no-git-checks --provenance=false",
+    "publish:next": "pnpm publish --access public --no-git-checks --provenance=false --tag next",
+    "publish:test": "pnpm publish --access public --no-git-checks --provenance=false --dry-run",
+    "publish:git": "pnpm publish --access public --no-git-checks --provenance=true",
+    "publish:git:next": "pnpm publish --access public --no-git-checks --provenance=true --tag next",
+    "publish:git:test": "pnpm publish --access public --no-git-checks --provenance=true --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
