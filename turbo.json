@@ -12,7 +12,7 @@
         "publish:next": {
             "dependsOn": ["build"]
         },
-        "test:publish": {
+        "publish:test": {
             "dependsOn": ["build"]
         }
     }

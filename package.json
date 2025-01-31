@@ -12,7 +12,7 @@
     "build": "turbo run build --color",
     "publish": "turbo run publish --color",
     "publish:next": "turbo run publish:next --color",
-    "test:publish": "turbo run test:publish --color",
+    "publish:test": "turbo run publish:test --color",
     "lint": "turbo run lint --color",
     "lint:fix": "turbo run lint:fix --color",
     "int": "prettier --write . --cache --ignore-unknown",
