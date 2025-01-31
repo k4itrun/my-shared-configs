@@ -1,19 +1,36 @@
+[eslint-config-href]: https://npmjs.com/package/@k4i/eslint-config
+[eslint-config-img]: https://img.shields.io/npm/v/%40k4i%2Feslint-config/latest.svg
+[eslint-config-downloads]: https://img.shields.io/npm/dw/@k4i/eslint-config
+[eslint-config-doc]: /packages/eslint-config/README.md
+
+[prettier-config-href]: https://npmjs.com/package/@k4i/prettier-config
+[prettier-config-img]: https://img.shields.io/npm/v/%40k4i%2Fprettier-config/latest.svg
+[prettier-config-downloads]: https://img.shields.io/npm/dw/@k4i/prettier-config
+[prettier-config-doc]: /packages/prettier-config/README.md
+
+[renovate-config-href]: https://npmjs.com/package/@k4i/renovate-config
+[renovate-config-img]: https://img.shields.io/github/package-json/v/k4i/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json
+[renovate-config-downloads]: /packages/renovate-config/src/index.json
+[renovate-config-doc]: /packages/renovate-config/README.md
+
+
 ## Shared Configurations
 
 ### Available Packages
 
-| **Package** | **Version** | **Downloads** | **Documentation** |
+| **Package** | **Version** | **Downloads** | **Reference** |
 | ----------- | ----------- | ------------- | ----------------- |
-| [`@k4i/eslint-config`](https://npmjs.com/package/@k4i/eslint-config) | ![Version](https://img.shields.io/npm/v/%40k4i%2Feslint-config/latest.svg) | ![Downloads](https://img.shields.io/npm/dw/@k4i/eslint-config) | [Documentation](/packages/eslint-config/README.md) |
-| [`@k4i/prettier-config`](https://npmjs.com/package/@k4i/prettier-config) | ![Version](https://img.shields.io/npm/v/%40k4i%2Fprettier-config/latest.svg) | ![Downloads](https://img.shields.io/npm/dw/@k4i/prettier-config) | [Documentation](/packages/prettier-config/README.md) |
-| [`@k4i/renovate-config`](https://npmjs.com/package/@k4i/renovate-config) | ![Version](https://img.shields.io/github/package-json/v/k4i/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json) | - | [Documentation](/packages/renovate-config/README.md) |
+| [`@k4i/eslint-config`][eslint-config-href]     | ![Version][eslint-config-img]   | ![Downloads][eslint-config-downloads]   | [Docs][eslint-config-doc]   |
+| [`@k4i/prettier-config`][prettier-config-href] | ![Version][prettier-config-img] | ![Downloads][prettier-config-downloads] | [Docs][prettier-config-doc] |
+| [`@k4i/renovate-config`][renovate-config-href] | ![Version][renovate-config-img] | ![Downloads][renovate-config-downloads] | [Docs][renovate-config-doc] |
 
-> 📦 Package  
-> 📝 Configuration
+> [!NOTE]
+> 📦 - Package  
+> 📝 - Configuration file
 
 ---
 
-## [`@k4i/prettier-config`](https://www.npmjs.com/package/@k4i/prettier-config)
+## [`@k4i/prettier-config`][prettier-config-href]
 
 ### Installation
 
@@ -70,7 +87,7 @@ export default {
 
 ---
 
-## [`@k4i/eslint-config`](https://www.npmjs.com/package/@k4i/eslint-config)
+## [`@k4i/eslint-config`][eslint-config-href]
 
 ### Installation
 
@@ -188,7 +205,7 @@ export default [
 
 ---
 
-## [`@k4i/renovate-config`](/packages/renovate-config/)
+## [`@k4i/renovate-config`][renovate-config-href]
 
 > This is a configuration, not a package.
 
