@@ -9,8 +9,8 @@
 [prettier-config-doc]: /packages/prettier-config/README.md
 
 [renovate-config-href]: https://npmjs.com/package/@k4i/renovate-config
-[renovate-config-img]: https://img.shields.io/github/package-json/v/k4i/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json
-[renovate-config-downloads]: /packages/renovate-config/src/index.json
+[renovate-config-img]: https://img.shields.io/github/package-json/v/k4itrun/my-shared-configs?filename=packages%2Frenovate-config%2Fpackage.json&label=github%40latest
+[renovate-config-downloads]: [prettier-config-downloads]
 [renovate-config-doc]: /packages/renovate-config/README.md
 
 
