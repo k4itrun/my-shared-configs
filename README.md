@@ -10,7 +10,6 @@
 
 [renovate-config-href]: https://npmjs.com/package/@k4i/renovate-config
 [renovate-config-img]: https://img.shields.io/github/package-json/v/k4itrun/my-shared-configs?filename=packages%2Frenovate-config%2Fpackage.json&label=github%40latest
-[renovate-config-downloads]: [prettier-config-downloads]
 [renovate-config-doc]: /packages/renovate-config/README.md
 
 
@@ -22,7 +21,7 @@
 | ----------- | ----------- | ------------- | ----------------- |
 | [`@k4i/eslint-config`][eslint-config-href]     | ![Version][eslint-config-img]   | ![Downloads][eslint-config-downloads]   | [Docs][eslint-config-doc]   |
 | [`@k4i/prettier-config`][prettier-config-href] | ![Version][prettier-config-img] | ![Downloads][prettier-config-downloads] | [Docs][prettier-config-doc] |
-| [`@k4i/renovate-config`][renovate-config-href] | ![Version][renovate-config-img] | ![Downloads][renovate-config-downloads] | [Docs][renovate-config-doc] |
+| [`@k4i/renovate-config`][renovate-config-href] | ![Version][renovate-config-img] | ![Downloads][prettier-config-downloads] | [Docs][renovate-config-doc] |
 
 > [!NOTE]
 > 📦 - Package  
