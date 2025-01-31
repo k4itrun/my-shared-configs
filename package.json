@@ -1,0 +1,60 @@
+{
+  "name": "@k4i/my-shared-configs",
+  "version": "1.0.0",
+  "description": "My shared ESLint and Prettier configs",
+  "private": true,
+  "author": "k4itrun",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "turbo run format --color",
+    "format:check": "turbo run format:check --color",
+    "build": "turbo run build --color",
+    "publish": "turbo run publish --color",
+    "publish:next": "turbo run publish:next --color",
+    "test:publish": "turbo run test:publish --color",
+    "lint": "turbo run lint --color",
+    "lint:fix": "turbo run lint:fix --color",
+    "int": "prettier --write . --cache --ignore-unknown",
+    "int-lint": "eslint --fix .",
+    "int:check": "prettier --check .",
+    "int-lint:check": "eslint .",
+    "update:docs": "tsx src/update-docs.ts",
+    "update:readme": "tsx src/update-readme.ts"
+  },
+  "dependencies": {
+    "markdown-table": "3.0.4",
+    "turbo": "2.3.4"
+  },
+  "devDependencies": {
+    "@k4i/eslint-config": "workspace:*",
+    "@k4i/prettier-config": "workspace:*",
+    "@types/node": "22.12.0",
+    "eslint": "9.19.0",
+    "prettier": "3.4.2",
+    "tsx": "4.19.2"
+  },
+  "keywords": [
+    "eslint",
+    "shared-configs",
+    "prettier",
+    "prettier-config",
+    "javascript",
+    "config",
+    "styleguide"
+  ],
+  "files": [
+    "packages",
+    "src",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k4itrun/shared-configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/k4itrun/shared-configs/issues"
+  },
+  "homepage": "https://github.com/k4itrun/shared-configs#readme",
+  "packageManager": "pnpm@9.15.4"
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+        "lint": {},
+        "lint:fix": {},
+        "format": {},
+        "format:check": {},
+        "build": {},
+        "publish": {
+            "dependsOn": ["build"]
+        },
+        "publish:next": {
+            "dependsOn": ["build"]
+        },
+        "test:publish": {
+            "dependsOn": ["build"]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
+  "dependencyDashboard": false,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "prFooter": "",
+  "reviewers": ["k4itrun"],
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["contentlayer"],
+      "groupName": "contentlayer"
+    },
+    {
+      "matchPackageNames": ["@udecode"],
+      "groupName": "@udecode/plate"
+    }
+  ]
+}

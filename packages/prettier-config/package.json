@@ -1,0 +1,60 @@
+{
+  "name": "@k4i/prettier-config",
+  "version": "1.0.0",
+  "description": "My custom Prettier config",
+  "author": "k4itrun",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "import": "./dist/esm/src/index.js",
+    "require": "./dist/cjs/src/index.cjs"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "publish": "pnpm publish --access public --no-git-checks --provenance",
+    "publish:next": "pnpm publish --access public --no-git-checks --provenance --tag next",
+    "publish:test": "pnpm publish --access public --no-git-checks --provenance --dry-run",
+    "format": "prettier . --write --cache --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-typescript": "12.1.2"
+  },
+  "devDependencies": {
+    "rollup": "4.32.1"
+  },
+  "peerDependencies": {
+    "prettier": "^3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "formatting",
+    "code-style",
+    "linting",
+    "beautifier",
+    "styleguide",
+    "config",
+    "prettier-config",
+    "prettier",
+    "javascript",
+    "code-formatter"
+  ],
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k4itrun/shared-configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/k4itrun/shared-configs/issues"
+  },
+  "homepage": "https://github.com/k4itrun/shared-configs/tree/main/packages/prettier-config#readme"
+}
