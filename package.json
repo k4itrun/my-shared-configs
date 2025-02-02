@@ -1,6 +1,6 @@
 {
   "name": "@k4i/my-shared-configs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My shared ESLint and Prettier configs",
   "private": true,
   "author": "k4itrun",

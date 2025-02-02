@@ -2,7 +2,7 @@ import type { Options } from "prettier";
 
 const config: Options = {
   // Max line length
-  printWidth: 80,
+  printWidth: 120,
   // Use single quotes
   singleQuote: true,
   // Trailing commas in ES5+ structures
