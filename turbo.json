@@ -7,22 +7,22 @@
         "format:check": {},
         "build": {},
         "publish": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         },
         "publish:next": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         },
         "publish:test": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         },
         "publish:git": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         },
         "publish:git:next": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         },
         "publish:git:test": {
-            "dependsOn": ["build"]
+            "dependsOn": ["update:docs", "build"]
         }
     }
 }
