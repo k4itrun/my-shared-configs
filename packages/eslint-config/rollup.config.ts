@@ -1,52 +1,52 @@
-import { readdirSync } from "node:fs";
-import { join, parse } from "node:path";
-import { RollupOptions, OutputOptions, ModuleFormat } from "rollup";
 import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginNodeResolve from "@rollup/plugin-node-resolve";
 import rollupPluginTypescript from "@rollup/plugin-typescript";
+import { RollupOptions } from "rollup";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
 
-const CONFIG_DIR = "src/configs/";
-const OUTPUT_DIR = "dist/";
-
-const baseConfig: Omit<RollupOptions, "input" | "output"> = {
-  treeshake: {
-    annotations: true,
-    propertyReadSideEffects: false,
-    unknownGlobalSideEffects: false,
-    moduleSideEffects: [],
-  },
-  plugins: [
-    rollupPluginTypescript({ tsconfig: "tsconfig.json" }),
-    rollupPluginAutoExternal(),
-    rollupPluginNodeResolve(),
-    rollupPluginCommonjs(),
-  ],
-  external: ["eslint-plugin-prettier/recommended"],
-};
-
-const outputConfig = (
-  format: ModuleFormat,
-  filename: string,
-): OutputOptions => ({
-  dir: OUTPUT_DIR,
-  entryFileNames: `${format}/src/${filename}.${
-    format === "esm" ? "js" : "cjs"
-  }`,
-  format,
+const defaultConfig = {
+ output: {
   sourcemap: false,
   exports: "default",
-});
+  dir: "dist",
+  preserveModules: true,
+ },
+ treeshake: {
+  annotations: true,
+  moduleSideEffects: [],
+  propertyReadSideEffects: false,
+  unknownGlobalSideEffects: false,
+ },
+ plugins: [
+  rollupPluginAutoExternal(),
+  rollupPluginNodeResolve(),
+  rollupPluginCommonjs(),
+  rollupPluginTypescript({
+   tsconfig: "tsconfig.json",
+   include: ["src/configs/**/*.ts", "src/index.ts"],
+   declaration: true,
+   declarationDir: "dist",
+   outDir: "dist",
+  }),
+ ],
 
-const buildConfig = (file: string) => {
-  const { name: filename } = parse(file);
-  return {
-    ...baseConfig,
-    input: join(CONFIG_DIR, file),
-    output: [outputConfig("esm", filename)] satisfies OutputOptions[],
-  };
-};
+ external: ["eslint-plugin-prettier/recommended"],
+} satisfies Partial<RollupOptions>;
 
-export default readdirSync(CONFIG_DIR).map<RollupOptions>((file) =>
-  buildConfig(file),
-);
+const config = [
+ {
+  ...defaultConfig,
+  external: [
+   // prettier
+   ...defaultConfig.external,
+  ],
+  output: {
+   ...defaultConfig.output,
+   entryFileNames: "[name].js",
+   format: "esm",
+  },
+  input: "src/index.ts",
+ },
+];
+
+export default config;

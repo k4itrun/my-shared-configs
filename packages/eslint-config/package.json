@@ -1,46 +1,42 @@
 {
   "name": "@k4i/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "My custom ESLint config",
   "author": "k4itrun",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/esm/src/index.js",
-      "require": "./dist/cjs/src/index.cjs"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./base": {
-      "import": "./dist/esm/src/base.js",
-      "require": "./dist/cjs/src/base.cjs"
+      "import": "./dist/configs/base.js",
+      "types": "./dist/configs/base.d.ts"
     },
     "./astro": {
-      "import": "./dist/esm/src/astro.js",
-      "require": "./dist/cjs/src/astro.cjs"
+      "import": "./dist/configs/astro.js",
+      "types": "./dist/configs/astro.d.ts"
     },
     "./prettier": {
-      "import": "./dist/esm/src/prettier.js",
-      "require": "./dist/cjs/src/prettier.cjs"
+      "import": "./dist/configs/prettier.js",
+      "types": "./dist/configs/prettier.d.ts"
     },
     "./next": {
-      "import": "./dist/esm/src/next.js",
-      "require": "./dist/cjs/src/next.cjs"
+      "import": "./dist/configs/next.js",
+      "types": "./dist/configs/next.d.ts"
     },
     "./node": {
-      "import": "./dist/esm/src/node.js",
-      "require": "./dist/cjs/src/node.cjs"
+      "import": "./dist/configs/node.js",
+      "types": "./dist/configs/node.d.ts"
     },
     "./react": {
-      "import": "./dist/esm/src/react.js",
-      "require": "./dist/cjs/src/react.cjs"
-    },
-    "./tailwindcss": {
-      "import": "./dist/esm/src/tailwindcss.js",
-      "require": "./dist/cjs/src/tailwindcss.cjs"
+      "import": "./dist/configs/react.js",
+      "types": "./dist/configs/react.d.ts"
     },
     "./typescript": {
-      "import": "./dist/esm/src/typescript.js",
-      "require": "./dist/cjs/src/typescript.cjs"
+      "import": "./dist/configs/typescript.js",
+      "types": "./dist/configs/typescript.d.ts"
     }
   },
   "scripts": {
@@ -95,6 +91,13 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
   },
   "keywords": [
     "javascript",
