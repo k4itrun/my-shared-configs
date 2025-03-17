@@ -37,7 +37,7 @@ export default {
 <!--START_SECTION:prettier-->
 | Rule                 | Value    | Reference                                                              |
 | -------------------- | -------- | ---------------------------------------------------------------------- |
-| `printWidth`         | `120`    | [Docs](https://prettier.io/docs/en/options.html#print-width)           |
+| `printWidth`         | `300`    | [Docs](https://prettier.io/docs/en/options.html#print-width)           |
 | `singleQuote`        | `true`   | [Docs](https://prettier.io/docs/en/options.html#single-quote)          |
 | `trailingComma`      | `es5`    | [Docs](https://prettier.io/docs/en/options.html#trailing-comma)        |
 | `semi`               | `true`   | [Docs](https://prettier.io/docs/en/options.html#semi)                  |
