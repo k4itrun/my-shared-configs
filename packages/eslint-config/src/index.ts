@@ -5,6 +5,7 @@ import nextConfig from "./configs/next";
 import nodeConfig from "./configs/node";
 import prettierConfig from "./configs/prettier";
 import reactConfig from "./configs/react";
+import tailwindcssConfig from "./configs/tailwindcss";
 import typescriptConfig from "./configs/typescript";
 
 type Config = { 
@@ -12,13 +13,14 @@ type Config = {
 };
 
 const configs: Config = {
- base: baseConfig,
- node: nodeConfig,
  astro: astroConfig,
+ base: baseConfig,
  next: nextConfig,
- react: reactConfig,
- typescript: typescriptConfig,
+ node: nodeConfig,
  prettier: prettierConfig,
+ react: reactConfig,
+ tailwindcss: tailwindcssConfig,
+ typescript: typescriptConfig,
 };
 
 export default configs;

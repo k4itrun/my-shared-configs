@@ -1,4 +1,4 @@
-import eslintConfig from "./dist/index";
+import eslintConfig from "./dist/src/index";
 
 export default [
   ...eslintConfig.base,

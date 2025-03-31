@@ -1,46 +1,47 @@
 {
   "name": "@k4i/eslint-config",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "My custom ESLint config",
   "author": "k4itrun",
   "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
     },
     "./base": {
-      "import": "./dist/configs/base.js",
-      "types": "./dist/configs/base.d.ts"
+      "import": "./dist/src/configs/base.js",
+      "types": "./dist/src/configs/base.d.ts"
     },
     "./astro": {
-      "import": "./dist/configs/astro.js",
-      "types": "./dist/configs/astro.d.ts"
+      "import": "./dist/src/configs/astro.js",
+      "types": "./dist/src/configs/astro.d.ts"
     },
     "./prettier": {
-      "import": "./dist/configs/prettier.js",
-      "types": "./dist/configs/prettier.d.ts"
+      "import": "./dist/src/configs/prettier.js",
+      "types": "./dist/src/configs/prettier.d.ts"
     },
     "./next": {
-      "import": "./dist/configs/next.js",
-      "types": "./dist/configs/next.d.ts"
+      "import": "./dist/src/configs/next.js",
+      "types": "./dist/src/configs/next.d.ts"
     },
     "./node": {
-      "import": "./dist/configs/node.js",
-      "types": "./dist/configs/node.d.ts"
+      "import": "./dist/src/configs/node.js",
+      "types": "./dist/src/configs/node.d.ts"
     },
     "./react": {
-      "import": "./dist/configs/react.js",
-      "types": "./dist/configs/react.d.ts"
+      "import": "./dist/src/configs/react.js",
+      "types": "./dist/src/configs/react.d.ts"
     },
     "./typescript": {
-      "import": "./dist/configs/typescript.js",
-      "types": "./dist/configs/typescript.d.ts"
+      "import": "./dist/src/configs/typescript.js",
+      "types": "./dist/src/configs/typescript.d.ts"
     }
   },
   "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "clean": "rimraf dist",
+    "build": "pnpm run clean && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "publish": "pnpm publish --access public --no-git-checks --provenance=false",
     "publish:next": "pnpm publish --access public --no-git-checks --provenance=false --tag next",
     "publish:test": "pnpm publish --access public --no-git-checks --provenance=false --dry-run",
@@ -77,11 +78,12 @@
     "typescript-eslint": "8.22.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-commonjs": "28.0.3",
     "@rollup/plugin-node-resolve": "16.0.0",
     "@rollup/plugin-typescript": "12.1.2",
     "@types/node": "22.12.0",
     "@types/rollup-plugin-auto-external": "2.0.5",
+    "rimraf": "^6.0.1",
     "rollup": "4.32.1",
     "rollup-plugin-auto-external": "2.0.0"
   },
@@ -117,7 +119,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/k4itrun/shared-configs.git"
+    "url": "git+https://github.com/k4itrun/shared-configs.git"
   },
   "bugs": {
     "url": "https://github.com/k4itrun/shared-configs/issues"
