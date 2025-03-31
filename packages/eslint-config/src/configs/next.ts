@@ -19,11 +19,13 @@ const mergedConfigs = mergeConfigs(
   ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals")),
 );
 
-export default (await composer(mergedConfigs)
-  .overrideRules({
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "error",
-  })
-  .renamePlugins({
-    "@next/next": "next",
-  })) satisfies Linter.Config[];
+export default [
+  ...(await composer(mergedConfigs)
+    .overrideRules({
+      "@next/next/no-html-link-for-pages": "off",
+      "@next/next/no-img-element": "error",
+    })
+    .renamePlugins({
+      "@next/next": "next",
+    }))
+] satisfies Linter.Config[];

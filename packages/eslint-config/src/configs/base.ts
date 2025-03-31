@@ -10,7 +10,7 @@ export default [
   name: "@k4i/eslint-config/gitignore",
  }),
  {
-  name: "@igorkowalczyk/eslint-config/base",
+  name: "@k4i/eslint-config/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
   ...js.configs.recommended,
   languageOptions: {
@@ -103,7 +103,7 @@ export default [
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/base/import",
+  name: "@k4i/eslint-config/base/import",
   plugins: {
    "import-x": importPluginX,
   },
@@ -123,7 +123,7 @@ export default [
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/base/stylistic",
+  name: "@k4i/eslint-config/base/stylistic",
   plugins: {
    "@stylistic": stylistic,
   },

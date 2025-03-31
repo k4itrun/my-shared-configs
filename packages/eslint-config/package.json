@@ -1,6 +1,6 @@
 {
   "name": "@k4i/eslint-config",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "My custom ESLint config",
   "author": "k4itrun",
   "license": "MIT",

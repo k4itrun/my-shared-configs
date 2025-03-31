@@ -8,21 +8,23 @@ const mergedTypescriptConfig = mergeConfigs(
   ) as unknown as Linter.Config[]),
 );
 
-export default (await composer(mergedTypescriptConfig)
-  .override("typescript-eslint/recommended", {
-    name: "@k4i/eslint-config/typescript",
-  })
-  .overrideRules({
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        caughtErrorsIgnorePattern: "^_",
-        destructuredArrayIgnorePattern: "^_",
-      },
-    ],
-  })
-  .renamePlugins({
-    "@typescript-eslint": "typescript",
-  })) satisfies Linter.Config[];
+export default [
+  ...(await composer(mergedTypescriptConfig)
+    .override("typescript-eslint/recommended", {
+      name: "@k4i/eslint-config/typescript",
+    })
+    .overrideRules({
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+        },
+      ],
+    })
+    .renamePlugins({
+      "@typescript-eslint": "typescript",
+    }))
+] satisfies Linter.Config[];

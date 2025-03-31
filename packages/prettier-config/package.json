@@ -1,6 +1,6 @@
 {
   "name": "@k4i/prettier-config",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "My custom Prettier config",
   "author": "k4itrun",
   "license": "MIT",
